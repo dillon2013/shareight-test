@@ -2,7 +2,7 @@
     "products": [
         {
             "name":"red blouse",
-            "type":"dress"
+            "type":"dresses"
         },
         {
             "name":"levis jeans",
@@ -18,11 +18,11 @@
         },
         {
             "name":"blue frock",
-            "type":"dress"
+            "type":"dresses"
         },
         {
             "name":"green pencil dress",
-            "type":"dress"
+            "type":"dresses"
         },
         {
             "name":"addidas trainers",
