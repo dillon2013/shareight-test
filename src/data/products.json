@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "name":"red blouse",
+            "type":"dress"
+        },
+        {
+            "name":"levis jeans",
+            "type":"jeans"
+        },
+        {
+            "name":"nike trainers",
+            "type":"shoes"
+        },
+        {
+            "name":"nike t-shirt",
+            "type":"t-shirts"
+        },
+        {
+            "name":"blue frock",
+            "type":"dress"
+        },
+        {
+            "name":"green pencil dress",
+            "type":"dress"
+        },
+        {
+            "name":"addidas trainers",
+            "type":"shoes"
+        },
+        {
+            "name":"diesel jeans",
+            "type":"jeans"
+        },
+        {
+            "name":"armani jeans",
+            "type":"jeans"
+        },
+        {
+            "name":"wrangler jeans",
+            "type":"jeans"
+        }
+    ]
+}
