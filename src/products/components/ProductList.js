@@ -1,0 +1,22 @@
+import React from 'react';
+import { connect } from 'react-redux'; 
+
+function ProductList ({filteredProducts}) {
+
+    function FilteredProducts () {
+      if (filteredProducts) {
+        return filteredProducts.map(product => <p key={product.name}>{ product.name }</p>)
+      }
+      return <p>click category</p>
+    }
+
+    return (
+      <div>
+        <FilteredProducts/>
+      </div>
+    )
+}
+
+const mapStateToProps = state => ({filteredProducts: state.filteredProducts});
+
+export default connect(mapStateToProps)(ProductList)

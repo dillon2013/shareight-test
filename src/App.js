@@ -1,54 +1,16 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
-import data from './data/products';
-
-
-function Home () {
-  return (
-    <div>
-      <p>this is the home page</p>
-    </div>
-  )
-}
-
-function Product ({match}) {
-  return (
-    <div>
-      {data.products.filter(product => product.type === match.params.productType).map(product => (
-        <p key={product.name}>{ product.name }</p>
-      ))}
-    </div>
-  )
-}
-
-function ProductLanding (props) {
-  return (
-    <div>Click on the category to filter</div>
-  )
-}
-
-function Products ({match}) {
-  let productTypes = ['dresses', 'jeans', 'shoes', 't-shirts'];
-  return (
-    <div>
-        <ul>
-          {productTypes.map(productType => (
-            <Link key={productType} to={`/products/${productType}`}>
-              <li>{ productType }</li>
-            </Link>
-          ))}
-        </ul>
-        <Route exact path={match.path} component={ProductLanding} />
-        <Route path={`${match.path}/:productType`} component={Product} />
-    </div>
-  )
-}
+import { Provider } from 'react-redux';
+import Home from './home/Home';
+import Products from './products/Products';
+import store from './store';
 
 
 class App extends Component {
   render() {
     return (
       <Router>
+        <Provider store={store}>
         <div>
           <ul>
             <li><Link to="/">Home</Link></li>
@@ -58,7 +20,8 @@ class App extends Component {
             <Route exact path="/" component={Home}/>
             <Route path="/products" component={Products}/>
           </Switch>
-      </div>
+        </div>
+        </Provider>
       </Router>
     );
   }
