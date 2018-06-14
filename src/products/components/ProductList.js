@@ -7,7 +7,7 @@ function ProductList ({filteredProducts}) {
       if (filteredProducts) {
         return filteredProducts.map(product => <p key={product.name}>{ product.name }</p>)
       }
-      return <p>click category</p>
+      return <p>click category to see what's in stock</p>
     }
 
     return (
