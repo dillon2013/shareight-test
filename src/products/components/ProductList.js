@@ -11,9 +11,7 @@ function ProductList ({filteredProducts}) {
     }
 
     return (
-      <div>
         <FilteredProducts/>
-      </div>
     )
 }
 
